@@ -67,7 +67,7 @@ export class AuthService{
 }
 
 // calling the class and wrap the class into object
-const authService = new AuthService()
+const authService = new AuthService();
 
 export default authService
 
