@@ -1,6 +1,6 @@
 import config from '../config/config'
 
-// here import appwrite hooks
+// here import appwrite account handlers
 import { Client, Account, ID } from "appwrite";
 
 // here start the quality code high level
