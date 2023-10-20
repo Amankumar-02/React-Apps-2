@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import './App.css'
 import authService from './appwrite/auth.js'
-import { login, logout } from './app/auth/authSlice'
+import { login, logout } from './features/auth/authSlice'
 import { Header, Footer } from './components/index'
 import {Outlet} from 'react-router-dom'
 
@@ -14,9 +14,9 @@ function App() {
   //chech status true or false, then dispatch to slice // 3 step work
   useEffect(()=>{
     authService.getCurrentUser()
-    .then(data=>{
-      if(data){
-        dispatch(login({data}))
+    .then(userData=>{
+      if(userData){
+        dispatch(login({userData}))
       }else{
         dispatch(logout())
       }

@@ -1,3 +1,4 @@
+// here slice main role is to identify the login and logout status
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
