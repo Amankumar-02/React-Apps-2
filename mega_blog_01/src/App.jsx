@@ -21,7 +21,7 @@ function App() {
         dispatch(logout())
       }
     })
-    .catch(error=>{console.log('Login Status Error Found', error)})
+    .catch((error)=>{console.log('Login Status Error Found', error)})
     // here finally is always execute 
     .finally(()=>setLoading(false))
   }, [])
@@ -36,7 +36,9 @@ function App() {
       <Footer/>
     </div>
     </div>
-  ) : null
+  ) : (
+    <div className='bg-red-600 text-white text-3xl py-5'>Loading Error: 404</div>
+  )
 }
 
 export default App
