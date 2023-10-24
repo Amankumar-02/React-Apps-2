@@ -1,6 +1,11 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-
+import Container from "./Container/Container";
+import Logo from "./Logo";
+import LogoutBtn from './Header/LogoutBtn';
+import CommonBtn from "./CommonBtn";
+import InputData from './InputData';
+ 
 export {
-    Header, Footer
+    Header, Footer, Container, Logo, LogoutBtn, CommonBtn, InputData
 }
