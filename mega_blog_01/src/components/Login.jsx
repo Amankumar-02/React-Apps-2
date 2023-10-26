@@ -57,7 +57,7 @@ export default function Login(){
                             <InputData
                             label="Email"
                             type="email"
-                            placeHolder="Enter your email here"
+                            placeholder="Enter your email here"
                             // syntex of register mandatory
                             {...register("email", {
                                 required:true,
@@ -70,7 +70,7 @@ export default function Login(){
                             <InputData
                             label="Password"
                             type="password"
-                            placeHolder="Enter your password here"
+                            placeholder="Enter your password here"
                             {...register("password", {
                                 required:true
                             })}
