@@ -32,8 +32,8 @@ export default function Signup(){
             className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
           >
             <div className="mb-2 flex justify-center">
-              <span className="inline-block w-full max-w-[100px]">
-                <Logo width="100%" />
+              <span className="inline-block w-full max-w-[50px]">
+                <Logo width="60px" />
               </span>
             </div>
             <h2 className="text-center text-2xl font-bold leading-tight">
@@ -51,7 +51,7 @@ export default function Signup(){
             {error && (
             <p className="text-red-600 mt-8 text-center">{error}</p>
             )}
-            <form onSubmit={handleSubmit(signinSubmit)}>
+            <form onSubmit={handleSubmit(signinSubmit)} className="mt-8">
               <div className="space-y-5">
                 <InputData
                   label="Full Name: "
