@@ -11,7 +11,7 @@ function LogoutBtn(){
         // calling the appwrite logout method gives a promise
         authService.createLogout()
         .then(()=>{dispatch(logout())})
-        .catch(error=>{console.log(error)})
+        .catch(error=>{console.log(`Header: Logout: Error`, error)})
     }
     return(
         <>

@@ -57,7 +57,7 @@ export class AuthService{
         try {
             // deleteSessions ==> delete all login sessions
             // 2nd deleteSession('current') ==> delete only the current session
-            return await this.account.deleteSessions();
+            await this.account.deleteSessions();
         } catch (error) {
             console.log(`Appwrite service :: logout :: error`, error);
         }

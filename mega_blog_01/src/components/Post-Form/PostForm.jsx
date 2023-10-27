@@ -80,9 +80,8 @@ export default function PostForm({post}){
             }
         });
         // below return will optimise the code 
-        return ()=>{
+        return ()=>
             subscription.unsubscribe();
-        }
     }, [watch, slugTransform, setValue])
 
     return(
@@ -129,7 +128,7 @@ export default function PostForm({post}){
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <CommonBtn type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <CommonBtn type="submit" bgColor={post ? "bg-green-500" : "bg-blue-500"} className="w-full">
                     {post ? "Update" : "Submit"}
                 </CommonBtn>
             </div>

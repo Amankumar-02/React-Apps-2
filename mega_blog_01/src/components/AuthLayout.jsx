@@ -8,19 +8,21 @@ import { useNavigate } from "react-router-dom";
 
 export default function Protected({
     children,
-    authentication=true,
+    authentication=true
 }){
-    const [loader, setLoader] = useState(true)
+    const [loader, setLoader] = useState(true);
     const authStatus = useSelector(state=>state.status)
     const navigate = useNavigate()
-
     useEffect(()=>{
         // true && false !== true ==> true && true
+        // false && false !== false ==> false && false
         if(authentication && authStatus !== authentication){
             navigate('/login')
         }
         // false && true !== true ==> false && false
+        // true && false 
         else if(!authentication && authStatus !== authentication){
+            // navigate('/login')
             navigate('/')
         }
         setLoader(false)

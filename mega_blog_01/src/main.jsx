@@ -17,29 +17,29 @@ const router = createBrowserRouter(
           <Login/>
           </Protected>
           }/>
-        <Route path='/signup' element={(
+        <Route path='/signup' element={
           <Protected authentication={false}>
           <Signup/>
           </Protected>
-          )}/>
-        <Route path='/all-posts' element={(
+          }/>
+        <Route path='/all-posts' element={
           <Protected authentication>
             {""}
           <AllPosts/>
           </Protected>
-          )}/>
-        <Route path='/add-post' element={(
+          }/>
+        <Route path='/add-post' element={
           <Protected authentication>
             {""}
           <AddPost/>
           </Protected>
-          )}/>
-        <Route path='/edit-post/:slug' element={(
+          }/>
+        <Route path='/edit-post/:slug' element={
           <Protected authentication>
             {""}
           <EditPost/>
           </Protected>
-          )}/>
+          }/>
         <Route path='/post/:slug' element={<Post/>}/>
     </Route>
   )
